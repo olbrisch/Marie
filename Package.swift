@@ -1,4 +1,4 @@
-// swift-tools-version: 5.8
+// swift-tools-version: 5.7
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -9,26 +9,14 @@ let package = Package(
     products: [
         .library(
             name: "MarieLib",
-            targets: ["MarieCore", "MarieExtensions", "MarieModels", "MarieScenes"]),
+            targets: ["Core"]),
     ],
     dependencies: [],
     targets: [
         .target(
-            name: "MarieCore",
+            name: "Core",
             dependencies: [],
             path: "Sources/Core",
             resources: [.process("Assets.xcassets")]),
-        .target(
-            name: "MarieExtensions",
-            dependencies: [],
-            path: "Sources/Extensions"),
-        .target(
-            name: "MarieModels",
-            dependencies: [],
-            path: "Sources/Models"),
-        .target(
-            name: "MarieScenes",
-            dependencies: [],
-            path: "Sources/Scenes"),
     ]
 )
