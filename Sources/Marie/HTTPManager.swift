@@ -9,7 +9,7 @@ import Foundation
 
 public final class HTTPManager {
     
-    static let shared = HTTPManager()
+    public static let shared = HTTPManager()
     
     private let session: URLSession
     

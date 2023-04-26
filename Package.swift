@@ -9,14 +9,14 @@ let package = Package(
     products: [
         .library(
             name: "MarieLib",
-            targets: ["Core"]),
+            targets: ["Marie"]),
     ],
     dependencies: [],
     targets: [
         .target(
-            name: "Core",
+            name: "Marie",
             dependencies: [],
-            path: "Sources/Core",
+            path: "Sources/Marie",
             resources: [.process("Assets.xcassets")]),
     ]
 )

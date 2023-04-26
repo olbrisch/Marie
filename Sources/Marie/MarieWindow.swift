@@ -9,7 +9,7 @@ import UIKit
 
 open class MarieWindow: UIWindow {
     
-    let requestSheetviewController: RequestSheetViewController = .init()
+    public let requestSheetviewController: RequestSheetViewController = .init()
     
     @available(iOS 13.0, *)
     public override init(windowScene: UIWindowScene) {
