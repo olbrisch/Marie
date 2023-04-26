@@ -20,7 +20,7 @@ public final class HTTPManager {
         session = URLSession(configuration: configuration)
     }
     
-    func get(url: URL, completion: @escaping (Result<Data, Error>) -> Void) {
+    public func get(url: URL, completion: @escaping (Result<Data, Error>) -> Void) {
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         let task = session.dataTask(with: request) { (data, response, error) in
@@ -35,7 +35,7 @@ public final class HTTPManager {
         task.resume()
     }
     
-    func post(url: URL, body: [String: Any], completion: @escaping (Result<Data, Error>) -> Void) {
+    public func post(url: URL, body: [String: Any], completion: @escaping (Result<Data, Error>) -> Void) {
         guard let jsonData = try? JSONSerialization.data(withJSONObject: body, options: []) else { return }
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
@@ -53,7 +53,7 @@ public final class HTTPManager {
         task.resume()
     }
     
-    func recall(request: URLRequest, completion: @escaping (Result<Data, Error>) -> Void) {
+    public func recall(request: URLRequest, completion: @escaping (Result<Data, Error>) -> Void) {
         let task = session.dataTask(with: request) { (data, response, error) in
             if let error = error {
                 completion(.failure(error))

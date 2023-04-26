@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class RequestSheetViewController: UIViewController {
+public final class RequestSheetViewController: UIViewController {
     
     private let viewModel: RequestSheetViewModel
     private let mainView: RequestSheetView = .init()
@@ -28,11 +28,11 @@ final class RequestSheetViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func loadView() {
+    public override func loadView() {
         view = mainView
     }
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationController()
         mainView.tableView.layoutSubviews()
@@ -81,18 +81,18 @@ final class RequestSheetViewController: UIViewController {
 
 extension RequestSheetViewController: UITableViewDelegate, UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         LogManager.shared.requestsLog.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: RequestSheetTableViewCell.reuseId, for: indexPath) as? RequestSheetTableViewCell else { return UITableViewCell() }
         let log = LogManager.shared.requestsLog[indexPath.row]
         cell.setup(logModel: log)
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let log = LogManager.shared.requestsLog[indexPath.row]
         let viewModel = RequestDetailViewModel(log: log)
         let viewController = RequestDetailViewController(viewModel: viewModel)
