@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "iphone.gen2.radiowaves.left.and.right.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "preserves-vector-representation" : true
+  }
+}
