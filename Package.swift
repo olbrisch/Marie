@@ -16,7 +16,7 @@ let package = Package(
         .target(
             name: "Core",
             dependencies: [],
-            path: "Sources",
+            path: "Sources/Core",
             resources: [.process("Assets.xcassets")]),
     ]
 )
