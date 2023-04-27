@@ -10,39 +10,39 @@ import UIKit
 extension UIColor {
     
     static var backgroudColor: UIColor = {
-        .init(named: "BackgroudColor") ?? .init()
+        .init(named: "BackgroudColor") ?? .white
     }()
     
     static var primaryTextColor: UIColor = {
-        .init(named: "PrimaryTextColor") ?? .init()
+        .init(named: "PrimaryTextColor") ?? .black
     }()
     
     static var secondaryTextColor: UIColor = {
-        .init(named: "SecondaryTextColor") ?? .init()
+        .init(named: "SecondaryTextColor") ?? UIColor(hex: "#454545")
     }()
     
     static var JSONKeyColor: UIColor = {
-        .init(named: "JSONKeyColor") ?? .init()
+        .init(named: "JSONKeyColor") ?? UIColor(hex: "#AAFF7E")
     }()
     
     static var JSONNumbersValueColor: UIColor = {
-        .init(named: "JSONNumbersValueColor") ?? .init()
+        .init(named: "JSONNumbersValueColor") ?? UIColor(hex: "#FFEC78")
     }()
     
     static var JSONOtherValuesColor: UIColor = {
-        .init(named: "JSONOtherValuesColor") ?? .init()
+        .init(named: "JSONOtherValuesColor") ?? UIColor(hex: "#FF5773")
     }()
     
     static var JSONStringValueColor: UIColor = {
-        .init(named: "JSONStringValueColor") ?? .init()
+        .init(named: "JSONStringValueColor") ?? UIColor(hex: "#FF9579")
     }()
     
     static var invertedPrimaryTextColor: UIColor = {
-        .init(named: "InvertedPrimaryTextColor") ?? .init()
+        .init(named: "InvertedPrimaryTextColor") ?? .white
     }()
     
     static var invertedSecondaryTextColor: UIColor = {
-        .init(named: "InvertedSecondaryTextColor") ?? .init()
+        .init(named: "InvertedSecondaryTextColor") ?? UIColor(hex: "#BEBEBE")
     }()
     
 }
