@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "gobackward@2x 1.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "preserves-vector-representation" : true
+  }
+}

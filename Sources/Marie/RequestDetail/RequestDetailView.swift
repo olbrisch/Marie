@@ -43,6 +43,7 @@ final class RequestDetailView: UIView {
         let label = UILabel()
         label.font = .systemFont(ofSize: 15)
         label.textColor = .secondaryTextColor
+        label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
