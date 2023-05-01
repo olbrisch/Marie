@@ -11,7 +11,7 @@ final class RequestSheetView: UIView {
     
     let gapView: UIView = {
         let view = UIView()
-        view.backgroundColor = .white.withAlphaComponent(0.2)
+        view.backgroundColor = .primaryTextColor.withAlphaComponent(0.2)
         view.layer.cornerRadius = 5
         view.translatesAutoresizingMaskIntoConstraints = false
         return view

@@ -42,7 +42,7 @@ open class MarieWindow: UIWindow {
             navigationController.navigationBar.shadowImage = UIImage()
             navigationController.navigationBar.barTintColor = nil
             navigationController.navigationBar.isTranslucent = true
-            rootViewController.present(navigationController, animated: true)
+            rootViewController.present(navigationController, animated: true, completion: nil)
         }
     }
 }
